@@ -199,7 +199,7 @@ class YOLOLayer(nn.Module):
 class Darknet(nn.Module):
     """YOLOv3 object detection model"""
 
-    def __init__(self, cfg_path, img_size=(1088, 608), nID=1591, test_emb=False):
+    def __init__(self, cfg_path, img_size=(512, 512), nID=1591, test_emb=False):
         super(Darknet, self).__init__()
 
         self.module_defs = parse_model_cfg(cfg_path)

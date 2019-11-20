@@ -14,7 +14,7 @@ from torch.utils.data import Dataset
 from utils.utils import xyxy2xywh
 
 class LoadImages:  # for inference
-    def __init__(self, path, img_size=(1088, 608)):
+    def __init__(self, path, img_size=(512, 512)):
         if os.path.isdir(path):
             image_format = ['.jpg', '.jpeg', '.png', '.tif']
             self.files = sorted(glob.glob('%s/*.*' % path))
@@ -77,7 +77,7 @@ class LoadImages:  # for inference
 
 
 class LoadVideo:  # for inference
-    def __init__(self, path, img_size=(1088, 608)):
+    def __init__(self, path, img_size=(512, 512)):
         self.cap = cv2.VideoCapture(path)        
         self.frame_rate = int(round(self.cap.get(cv2.CAP_PROP_FPS)))
         self.vw = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
