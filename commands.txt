@@ -1,0 +1,1 @@
+python demo.py --input-video C:/Users/yliu60/Downloads/new_test.mp4 --weights C:/Users/yliu60/Downloads/jde.1088x608.uncertainty.pt --output-format video --output-root temp

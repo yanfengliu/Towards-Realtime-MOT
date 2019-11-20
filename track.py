@@ -108,7 +108,7 @@ def main(opt, data_root='/data/MOT16/train', det_root=None, seqs=('MOT16-05',), 
         accs.append(evaluator.eval_file(result_filename))
         if save_videos:
             output_video_path = osp.join(output_dir, '{}.mp4'.format(seq))
-            cmd_str = 'ffmpeg -f image2 -i {}/%05d.jpg -c:v copy {}'.format(output_dir, output_video_path)
+            cmd_str = 'ffmpeg -f image2 -i {}/{%05d}.jpg -c:v copy {}'.format(output_dir, n_frame, output_video_path)
             os.system(cmd_str)
     timer_avgs = np.asarray(timer_avgs)
     timer_calls = np.asarray(timer_calls)

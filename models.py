@@ -5,11 +5,10 @@ import torch.nn as nn
 
 from utils.parse_config import *
 from utils.utils import *
-from utils.syncbn import SyncBN
 import time
 import math
 
-batch_norm=SyncBN #nn.BatchNorm2d
+batch_norm=nn.BatchNorm2d
 
 def create_modules(module_defs):
     """
@@ -133,7 +132,7 @@ class YOLOLayer(nn.Module):
             if p.is_cuda:
                 self.grid_xy = self.grid_xy.cuda()
                 self.anchor_wh = self.anchor_wh.cuda()
-
+            
         p = p.view(nB, self.nA, self.nC + 5, nGh, nGw).permute(0, 1, 3, 4, 2).contiguous()  # prediction
         
         p_emb = p_emb.permute(0,2,3,1).contiguous()
@@ -252,7 +251,6 @@ class Darknet(nn.Module):
                     x = module[0](x, self.img_size)
                 output.append(x)
             layer_outputs.append(x)
-
         if is_training:
             self.losses['nT'] /= 3 
             output = [o.squeeze() for o in output]
