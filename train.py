@@ -13,7 +13,7 @@ from torchvision.transforms import transforms as T
 def train(
         cfg,
         data_cfg,
-        img_size=(1088,608),
+        img_size=(512, 512),
         resume=False,
         epochs=100,
         batch_size=16,

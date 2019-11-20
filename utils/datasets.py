@@ -125,7 +125,7 @@ class LoadVideo:  # for inference
 
 
 class LoadImagesAndLabels:  # for training
-    def __init__(self, path, img_size=(1088,608),  augment=False, transforms=None):
+    def __init__(self, path, img_size=(512, 512),  augment=False, transforms=None):
         with open(path, 'r') as file:
             self.img_files = file.readlines()
             self.img_files = [x.replace('\n', '') for x in self.img_files]
@@ -338,7 +338,7 @@ def collate_fn(batch):
 
 
 class JointDataset(LoadImagesAndLabels):  # for training
-    def __init__(self, root, paths, img_size=(1088,608), augment=False, transforms=None):
+    def __init__(self, root, paths, img_size=(512, 512), augment=False, transforms=None):
         
         dataset_names = paths.keys()
         self.img_files = OrderedDict()
