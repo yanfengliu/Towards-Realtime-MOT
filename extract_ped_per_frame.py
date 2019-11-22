@@ -75,7 +75,7 @@ if __name__ == '__main__':
     parser.add_argument('--iou-thres', type=float, default=0.3, help='iou threshold required to qualify as detected')
     parser.add_argument('--conf-thres', type=float, default=0.3, help='object confidence threshold')
     parser.add_argument('--nms-thres', type=float, default=0.3, help='iou threshold for non-maximum suppression')
-    parser.add_argument('--img-size', type=int, default=(512, 512), help='size of each image dimension')
+    parser.add_argument('--img-size', type=int, default=(256, 256), help='size of each image dimension')
     parser.add_argument('--print-interval', type=int, default=10, help='size of each image dimension')
     parser.add_argument('--input-root', type=str, default='/home/wangzd/datasets/youtube/data/0004/frame', help='path to input frames')
     parser.add_argument('--output-root', type=str, default='/home/wangzd/datasets/youtube/data/0004/ped_per_frame', help='path to output frames')

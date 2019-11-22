@@ -13,7 +13,7 @@ from torchvision.transforms import transforms as T
 def train(
         cfg,
         data_cfg,
-        img_size=(512, 512),
+        img_size=(256, 256),
         resume=False,
         epochs=100,
         batch_size=16,
@@ -37,7 +37,7 @@ def train(
 
     transforms = T.Compose([T.ToTensor()])
     # Get dataloader
-    dataset = JointDataset(dataset_root, trainset_paths, img_size, augment=True, transforms=transforms)
+    dataset = JointDataset(dataset_root, trainset_paths, img_size, augment=False, transforms=transforms)
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=True,
                                              num_workers=8, pin_memory=True, drop_last=True, collate_fn=collate_fn) 
     
@@ -169,7 +169,7 @@ if __name__ == '__main__':
     parser.add_argument('--accumulated-batches', type=int, default=1, help='number of batches before optimizer step')
     parser.add_argument('--cfg', type=str, default='cfg/yolov3.cfg', help='cfg file path')
     parser.add_argument('--data-cfg', type=str, default='cfg/ccmcpe.json', help='coco.data file path')
-    parser.add_argument('--img-size', type=int, default=(512, 512), help='pixels')
+    parser.add_argument('--img-size', type=int, default=(256, 256), help='pixels')
     parser.add_argument('--resume', action='store_true', help='resume training flag')
     parser.add_argument('--print-interval', type=int, default=40, help='print interval')
     parser.add_argument('--test-interval', type=int, default=9, help='test interval')

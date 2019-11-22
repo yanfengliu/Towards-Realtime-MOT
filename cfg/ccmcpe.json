@@ -1,24 +1,13 @@
 {
-    "root":"/home/wangzd/datasets/MOT",
+    "root":"C:/Users/yliu60/Documents/GitHub/embedding_tracking/dataset/6_shapes",
     "train":
     {
-        "mot17":"./data/mot17.train",
-        "caltech":"./data/caltech.train",
-        "citypersons":"./data/citypersons.train",
-        "cuhksysu":"./data/cuhksysu.train",
-        "prw":"./data/prw.train",
-        "eth":"./data/eth.train"
-    },
-    "test_emb":
-    {
-        "caltech":"./data/caltech.10k.val",
-        "cuhksysu":"./data/cuhksysu.val",
-        "prw":"./data/prw.val"
+        "seq_0":"C:/Users/yliu60/Documents/GitHub/embedding_tracking/dataset/6_shapes/seq_0.train",
+        "seq_1":"C:/Users/yliu60/Documents/GitHub/embedding_tracking/dataset/6_shapes/seq_1.train"
     },
     "test":
     {
-        "mot19":"./data/mot19.train",
-        "caltech":"./data/caltech.val",
-        "citypersons":"./data/citypersons.val"
+        "seq_0":"C:/Users/yliu60/Documents/GitHub/embedding_tracking/dataset/6_shapes/seq_0.test",
+        "seq_1":"C:/Users/yliu60/Documents/GitHub/embedding_tracking/dataset/6_shapes/seq_1.test"
     }
 }
