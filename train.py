@@ -94,9 +94,6 @@ def train(
         logger.info(('%8s%12s' + '%10s' * 6) % (
             'Epoch', 'Batch', 'box', 'conf', 'id', 'total', 'nTargets', 'time'))
 
-        # Update scheduler (automatic)
-        scheduler.step()
-
         
         # Freeze darknet53.conv.74 for first epoch
         if freeze_backbone and (epoch < 2):
@@ -145,6 +142,9 @@ def train(
             t0 = time.time()
             if i % opt.print_interval == 0:
                 logger.info(s)
+
+        # Update scheduler (automatic)
+        scheduler.step()
 
 
         # Save latest checkpoint
