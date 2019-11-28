@@ -110,7 +110,7 @@ class YOLOLayer(nn.Module):
         self.nC = nC  # number of classes (80)
         self.nID = nID # number of identities
         self.img_size = 0
-        self.emb_dim = 512
+        self.emb_dim = 24
 
         self.SmoothL1Loss  = nn.SmoothL1Loss()
         self.SoftmaxLoss = nn.CrossEntropyLoss(ignore_index=-1)
@@ -211,7 +211,7 @@ class Darknet(nn.Module):
         self.losses = OrderedDict()
         for ln in self.loss_names:
             self.losses[ln] = 0
-        self.emb_dim = 512
+        self.emb_dim = 24
         self.classifier = nn.Linear(self.emb_dim, nID)
         self.test_emb=test_emb
 
