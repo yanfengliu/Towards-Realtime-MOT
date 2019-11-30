@@ -15,6 +15,8 @@ from utils.evaluation import Evaluator
 import utils.datasets as datasets
 import torch
 from track import eval_seq
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 def track(opt):

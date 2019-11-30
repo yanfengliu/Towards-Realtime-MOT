@@ -1,3 +1,3 @@
 python train.py --epochs=10 --batch-size=1
 
-python demo.py --input-video C:/Users/yliu60/Documents/GitHub/embedding_tracking/dataset2/6_shapes/test/seq_0/video/video.avi --weights C:/Users/yliu60/Documents/GitHub/Towards-Realtime-MOT/weights/epoch-10.pt --output-format video --output-root temp
+python demo.py --input-video C:/Users/yliu60/Documents/GitHub/embedding_tracking/dataset2/6_shapes/test/seq_1/video/video.avi --weights C:/Users/yliu60/Documents/GitHub/Towards-Realtime-MOT/weights/epoch-10.pt --output-format video --output-root temp
