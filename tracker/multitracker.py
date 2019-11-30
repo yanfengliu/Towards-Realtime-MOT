@@ -153,7 +153,7 @@ class STrack(BaseTrack):
 class JDETracker(object):
     def __init__(self, opt, frame_rate=30):
         self.opt = opt
-        self.model = Darknet(opt.cfg, opt.img_size, nID=14455)
+        self.model = Darknet(opt.cfg, opt.img_size, nID=8107)
         # load_darknet_weights(self.model, opt.weights)
         self.model.load_state_dict(torch.load(opt.weights, map_location='cpu')['model'], strict=False)
         self.model.cuda().eval()

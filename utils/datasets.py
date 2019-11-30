@@ -357,7 +357,6 @@ class JointDataset(LoadImagesAndLabels):  # for training
             print(f'Joing dataset {ds}')
             max_index = -1
             for lp in label_paths:
-                print(f'Joining label path at {lp}')
                 lb = np.loadtxt(lp)
                 if len(lb) < 1:
                     continue

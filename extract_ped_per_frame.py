@@ -22,7 +22,7 @@ def extract_ped_per_frame(
         conf_thres=0.3,
         nms_thres=0.45,
         print_interval=40,
-        nID=14455,
+        nID=8107,
 ):
     mkdir_if_missing(output_root)
     

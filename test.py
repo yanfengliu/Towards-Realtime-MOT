@@ -21,7 +21,7 @@ def test(
         conf_thres=0.3,
         nms_thres=0.45,
         print_interval=40,
-        nID=14455,
+        nID=8107,
 ):
 
     # Configure run
@@ -154,7 +154,7 @@ def test_emb(
             conf_thres=0.3,
             nms_thres=0.45,
             print_interval=40,
-            nID=14455,
+            nID=8107,
 ):
 
     # Configure run
